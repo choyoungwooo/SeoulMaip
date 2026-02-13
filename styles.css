@@ -279,11 +279,6 @@ section {
 /* ============================= */
 /* 모바일 */
 /* ============================= */
-
-.mobile-text {
-  display: none;
-}
-
 @media (max-width: 768px) {
 
   section {
@@ -345,9 +340,7 @@ section {
     display: none;
   }
 
-  .mobile-text {
-    display: block;
-  }
+
 }
 
 
@@ -887,9 +880,6 @@ section {
   height: 100%;
 }
 /* 기본값은 모바일 숨김 */
-.mobile-text {
-  display: none;
-}
 
 /* 모바일 화면일 때 */
 /* ============================= */
@@ -916,23 +906,18 @@ section {
     display: none;
   }
 
-  .mobile-text {
-    display: block;
-  }
-
   /* ========================= */
   /* 강점 카드 정리 */
   /* ========================= */
-  .feature-box {
+.feature-boxes {
     width: 100%;
-    max-width: 340px;
-    border-left: none;
-    border-top: 4px solid var(--brown-light);
+    padding: 0 10px;   /* 좌우 여백 추가 */
   }
 
-  .feature-boxes {
-    flex-direction: column;
-    align-items: center;
+  .feature-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   /* ========================= */
@@ -952,24 +937,20 @@ section {
   /* 지도 영역 안정화 */
   /* ========================= */
   .map-wrapper {
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 30px;
+    padding: 0 10px;
   }
 
   .map-box {
-    height: 260px;
-    min-height: 260px;
+    width: 100%;
+    height: 280px;
+    min-height: 280px;
   }
 
   .map-box iframe {
+    width: 100%;
     height: 100%;
+    border-radius: 16px;
   }
-
-  .map-info {
-    padding: 25px;
-  }
-
   /* ========================= */
   /* 플로팅 버튼 위치 수정 */
   /* ========================= */
