@@ -362,3 +362,31 @@ section {
     display: block;
   }
 }
+/* ✅ 모바일 깨짐 최종 강제 패치 (맨 아래에 추가) */
+* { box-sizing: border-box; }
+
+@media (max-width: 768px) {
+
+  /* ===== 강점 카드 폭/라인 정리 ===== */
+  .feature-boxes { width: 100%; }
+  .feature-box {
+    flex: none;              /* ✅ flex 영향 제거 */
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  /* ===== 지도 박스 빈공간/짤림 정리 ===== */
+  .map-box {
+    min-height: 0 !important;   /* ✅ PC min-height 죽이기 */
+    height: 260px !important;
+  }
+
+  .map-box iframe {
+    height: 260px !important;   /* ✅ % 대신 px로 강제 */
+    display: block;
+  }
+
+  /* 플로팅 버튼 겹침이 거슬리면(선택) */
+  .map-info { padding-right: 90px; }
+}
