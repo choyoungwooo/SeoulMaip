@@ -42,7 +42,7 @@ section {
 .hero {
   height: 40vh;
   background-color: var(--highlight);
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,12 +52,12 @@ section {
 }
 
 .hero h2 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   opacity: 0.95;
 }
 
@@ -78,7 +78,7 @@ section {
   margin: 0 auto 60px;
   text-align: center;
   line-height: 1.8;
-  color: #555;
+  color: var(--subtext);
 }
 
 /* ============================= */
@@ -96,8 +96,7 @@ section {
   text-align: left;
   font-size: 1.05rem;
   line-height: 1.9;
-  color: var(--subtext);
-  background: #ffffff;
+  background: #fff;
   padding: 50px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.04);
@@ -124,15 +123,16 @@ section {
 .feature-box {
   background: var(--box-bg);
   border-left: 5px solid var(--brown-light);
-  border-radius: 10px;
-  padding: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  flex: 1 1 300px;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  flex: 1 1 280px;
   min-width: 260px;
 }
 
 .feature-box h4 {
   color: var(--brown);
+  margin-bottom: 12px;
 }
 
 /* ============================= */
@@ -162,7 +162,7 @@ section {
 .step {
   background: var(--box-bg);
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   padding: 32px 24px;
   width: 240px;
   transition: transform 0.2s ease;
@@ -200,6 +200,7 @@ section {
 .map-box iframe {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .map-info {
@@ -217,7 +218,7 @@ section {
 }
 
 /* ============================= */
-/* 버튼 */
+/* 상담 버튼 */
 /* ============================= */
 
 .contact-buttons {
@@ -236,10 +237,9 @@ section {
   border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1rem;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
 .contact-btn.call {
@@ -274,6 +274,17 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ============================= */
+/* 푸터 */
+/* ============================= */
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 100px 20px;
 }
 
 /* ============================= */
@@ -320,654 +331,17 @@ section {
     align-items: center;
   }
 
+  .feature-box,
   .step {
     width: 100%;
     max-width: 340px;
-  }
-
-  .map-box {
-    height: 260px;
-  }
-
-  .floating-contact {
-    right: 15px;
-    bottom: 20px;
-    top: auto;
-    transform: none;
-  }
-
-  .floating-btn {
-    width: 60px;
-    height: 60px;
-  }
-
-  .pc-text {
-    display: none;
-  }
-
-  .mobile-text {
-    display: block;
-  }
-}
-
-
-/* Footer */
-.footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.footer-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  display: block;
-}
-
-.footer-links {
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: var(--footer-text);
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.footer-banner {
-  background-color: var(--footer-banner);
-  padding: 20px 0;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--highlight);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-  }
-
-  .nav {
-    margin-top: 10px;
-  }
-
-  .feature-box {
-    flex: 1 1 100%;
-  }
-
-  .map-info {
-    padding: 0 10px;
-  }
-}
-
-.steps {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.step {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 30px;
-  width: 220px;
-  transition: transform 0.2s;
-}
-
-.step:hover {
-  transform: translateY(-5px);
-}
-
-.step-icon {
-  font-size: 2.5rem;
-  color: #8b5e3c; /* 아이콘 브라운 */
-  margin-bottom: 16px;
-}
-
-.step h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #5c3a1a;
-  font-weight: 600;
-}
-
-.step p {
-  font-size: 0.9rem;
-  color: #7b5a3c;
-  line-height: 1.4;
-}
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-.contact-btn i {
-  font-size: 1.1rem;
-}
-
-/* 색상 조정 */
-.contact-btn.call {
-  background-color: #603813;  /* 진한 브라운 */
-  color: #fff;
-}
-
-.contact-btn.kakao {
-  background-color: #fae100;  /* 카카오 노랑 */
-  color: #000;
-}
-
-.contact-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-.procedure {
-  text-align: center;
-  padding: 100px 20px;
-  background-color: #fff8f0; /* 연한 베이지톤 */
-}
-
-/* 타이틀 */
-.procedure-title {
-  font-size: 2.2rem;
-  color: var(--highlight); /* 진한 브라운 */
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-
-/* 서브설명 */
-.procedure-subtitle {
-  font-size: 1rem;
-  color: var(--subtext);
-  margin-bottom: 40px;
-}
-
-/* 유의사항 리스트 */
-.procedure-notes {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 60px;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  line-height: 1.8;
-  color: var(--text);
-}
-
-.procedure-notes li {
-  margin-bottom: 8px;
-  padding-left: 1.5em;
-  position: relative;
-}
-
-.procedure-notes li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--brown-light);
-  font-size: 0.9rem;
-  top: 2px;
-}
-
-/* 절차 박스 영역 */
-.procedure-steps {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-/* 각 스텝 박스 */
-.step {
-  background: var(--box-bg);
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 32px 24px;
-  width: 240px;
-  transition: transform 0.2s ease;
-}
-
-.step:hover {
-  transform: translateY(-6px);
-}
-
-/* 아이콘 */
-.step-icon {
-  font-size: 2.5rem;
-  color: var(--brown-light);
-  margin-bottom: 16px;
-}
-
-/* 제목 */
-.step-title {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: var(--highlight);
-  font-weight: 600;
-}
-
-/* 설명 */
-.step-desc {
-  font-size: 0.9rem;
-  color: #7b5a3c;
-  line-height: 1.5;
-}
-
-/* 마지막 배너 문구 */
-.procedure-footer {
-  background-color: var(--brand-banner-bg);
-  margin-top: 50px;
-  padding: 16px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  color: var(--highlight);
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .procedure-notes {
-    padding: 0 10px;
-    text-align: left;
-  }
-
-  .step {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-.procedure-box {
-  background-color: #fff;
-  padding: 24px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  max-width: 720px;
-  margin: 0 auto 60px;
-}
-
-.procedure-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.procedure-list li {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 12px;
-}
-
-.procedure-list li i {
-  color: #8b5e3c; /* 브라운 체크 아이콘 */
-  margin-right: 10px;
-  font-size: 1rem;
-}
-.contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 22px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.05rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-.contact-btn.call {
-  background-color: #af8966;
-  color: #fff;
-}
-.contact-btn.kakao {
-  background-color: #fae100;
-  color: #3d1e1e;
-}
-.contact-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-  border-color: #ccc;
-}
-
-.about {
-  background-color: #f7f3ee;   /* 살짝 톤 차이 주기 (안 주셔도 됨) */
-  padding: 120px 20px;
-}
-
-.about .section-title {
-  margin-bottom: 30px;
-}
-
-.about .section-description {
-  max-width: 900px;      /* 기존 760 → 900으로 확장 */
-  margin: 0 auto;
-  text-align: left;      /* 🔥 핵심: 가운데 → 왼쪽 정렬 */
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: var(--subtext);
-}
-.about .section-description {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: var(--subtext);
-  background: #ffffff;
-  padding: 50px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-}
-.map-wrapper {
-  display: flex;
-  gap: 60px;
-  margin-top: 60px;
-  align-items: stretch;
-}
-
-.map-box {
-  flex: 1;
-  min-height: 360px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-}
-
-.map-info {
-  flex: 1;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-}
-
-.map-info h4 {
-  margin-top: 20px;
-  color: var(--brown);
-}
-
-.phone {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--highlight);
-}
-.fixed-contact {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 12px;
-  z-index: 9999;
-}
-
-.floating-contact {
-  position: fixed;
-  right: 20px;
-  top: 30%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
-}
-
-.floating-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90px;
-  height: 90px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-}
-
-.floating-btn i {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
-}
-
-.floating-btn.call {
-  background-color: #af8966;
-  color: #fff;
-}
-
-.floating-btn.kakao {
-  background-color: #fae100;
-  color: #3d1e1e;
-}
-
-.floating-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-}
-@media (max-width: 768px) {
-  .floating-contact {
-    right: 10px;
-  }
-
-  .floating-btn {
-    width: 70px;
-    height: 70px;
-    font-size: 0.75rem;
-  }
-
-  .floating-btn i {
-    font-size: 1.1rem;
-  }
-}
-/* ============================= */
-/* 📱 모바일 최적화 */
-/* ============================= */
-@media (max-width: 768px) {
-
-  section {
-    padding: 60px 20px;
-  }
-
-  /* HERO */
-  .hero {
-    height: auto;
-    padding: 80px 20px;
-  }
-
-  .hero h2 {
-    font-size: 1.6rem;
-    line-height: 1.4;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  /* 버튼 세로 정렬 */
-  .contact-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-btn {
-    width: 80%;
-    justify-content: center;
-  }
-
-  /* 회사소개 */
-  .about .section-description {
-    padding: 25px;
-    font-size: 0.95rem;
-  }
-
-  /* 강점 */
-  .feature-boxes {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature-box {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  /* 절차 */
-  .steps {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .step {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  /* 지도 */
-  .map-wrapper {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .map-box {
-    height: 300px;   /* 🔥 모바일 지도 높이 고정 */
-  }
-
-  .map-info {
-    padding: 25px;
-  }
-
-  /* 플로팅 버튼 아래로 */
-  .floating-contact {
-    right: 10px;
-    bottom: 20px;
-    top: auto;
-    transform: none;
-  }
-
-  .floating-btn {
-    width: 60px;
-    height: 60px;
-  }
-
-  /* 푸터 */
-  .footer {
-    padding: 60px 20px;
-    font-size: 0.85rem;
-  }
-}
-.map-box iframe {
-  width: 100%;
-  height: 100%;
-}
-/* 기본값은 모바일 숨김 */
-.mobile-text {
-  display: none;
-}
-
-/* 모바일 화면일 때 */
-/* ============================= */
-/* 📱 모바일 레이아웃 안정화 패치 */
-/* ============================= */
-@media (max-width: 768px) {
-
-  /* 전체 섹션 여백 정리 */
-  section {
-    padding: 60px 20px;
-  }
-
-  /* ========================= */
-  /* 회사소개 박스 안정화 */
-  /* ========================= */
-  .about .section-description {
-    padding: 25px !important;
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-
-  /* PC 문구 숨김 / 모바일만 표시 */
-  .pc-text {
-    display: none;
-  }
-
-  .mobile-text {
-    display: block;
-  }
-
-  /* ========================= */
-  /* 강점 카드 정리 */
-  /* ========================= */
-.feature-boxes {
-    width: 100%;
-    padding: 0 10px;   /* 좌우 여백 추가 */
-  }
-
-  .feature-box {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  /* ========================= */
-  /* 매입 절차 박스 정리 */
-  /* ========================= */
-  .step {
-    width: 100%;
-    max-width: 340px;
-  }
-
-  .steps {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* ========================= */
-  /* 지도 영역 안정화 */
-  /* ========================= */
-  .map-wrapper {
-    padding: 0 10px;
   }
 
   .map-box {
     width: 100%;
     height: 280px;
-    min-height: 280px;
   }
 
-  .map-box iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-  }
-  /* ========================= */
-  /* 플로팅 버튼 위치 수정 */
-  /* ========================= */
   .floating-contact {
     right: 15px;
     bottom: 20px;
@@ -978,8 +352,13 @@ section {
   .floating-btn {
     width: 60px;
     height: 60px;
-    border-radius: 16px;
   }
 
-}
+  .pc-text {
+    display: none;
+  }
 
+  .mobile-text {
+    display: block;
+  }
+}
