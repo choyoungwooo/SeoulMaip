@@ -131,7 +131,7 @@ section {
 }
 
 .feature-title {
-  font-size: 1.25rem;   /* 기존보다 살짝 크게 */
+  font-size: 1.4rem;   /* 기존보다 살짝 크게 */
   font-weight: 700;
   color: var(--brown);
   margin-bottom: 12px;
