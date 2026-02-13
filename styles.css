@@ -40,16 +40,36 @@ section {
 /* ============================= */
 
 .hero {
-  height: 40vh;
   background-color: var(--highlight);
-  color: #fff;
+  padding: 100px 20px;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 20px;
+  justify-content: space-between;
+  gap: 60px;
 }
+
+.hero-text {
+  flex: 1;
+  color: #fff;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
 
 .hero h2 {
   font-size: 2.6rem;
@@ -471,6 +491,23 @@ section {
     min-width: 140px;
     font-size: 0.95rem;
     padding: 12px 18px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    max-width: 260px;
   }
 
 }
