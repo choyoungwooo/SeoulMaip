@@ -279,6 +279,11 @@ section {
 /* ============================= */
 /* 모바일 */
 /* ============================= */
+
+.mobile-text {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   section {
@@ -340,7 +345,9 @@ section {
     display: none;
   }
 
-
+  .mobile-text {
+    display: block;
+  }
 }
 
 
@@ -880,6 +887,9 @@ section {
   height: 100%;
 }
 /* 기본값은 모바일 숨김 */
+.mobile-text {
+  display: none;
+}
 
 /* 모바일 화면일 때 */
 /* ============================= */
@@ -904,6 +914,10 @@ section {
   /* PC 문구 숨김 / 모바일만 표시 */
   .pc-text {
     display: none;
+  }
+
+  .mobile-text {
+    display: block;
   }
 
   /* ========================= */
