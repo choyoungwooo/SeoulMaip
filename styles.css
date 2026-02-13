@@ -1,16 +1,20 @@
+/* ============================= */
+/* 기본 설정 */
+/* ============================= */
+
 :root {
-  --bg: #FDF9F4;               /* 전체 배경: 아이보리 톤 */
-  --brown: #A67C52;            /* 기본 브라운 (밝은 모카) */
-  --brown-light: #CDA77D;      /* 라이트 브라운 (밀크 카라멜) */
-  --footer-bg: #A67C52;        /* 푸터도 동일하게 */
-  --footer-text: #fff4e6;      /* 연한 크림 */
-  --footer-banner: #f8eee3;    /* 푸터 배너 배경 */
-  --text: #3B2E25;             /* 본문 글씨: 짙은 브라운 */
-  --subtext: #5A4B3D;          /* 부제: 중간 브라운 */
-  --box-bg: #ffffff;           /* 박스는 화이트 */
-  --trust-banner-bg: #f5e6d4;  /* 배너 밝은 베이지 */
-  --brand-banner-bg: #f8e5cb;  /* 브랜드 배너 살구빛 */
-  --highlight: #c09f87;        /* 강조색: 브론즈 브라운 */
+  --bg: #FDF9F4;
+  --brown: #A67C52;
+  --brown-light: #CDA77D;
+  --footer-bg: #A67C52;
+  --footer-text: #fff4e6;
+  --footer-banner: #f8eee3;
+  --text: #3B2E25;
+  --subtext: #5A4B3D;
+  --box-bg: #ffffff;
+  --trust-banner-bg: #f5e6d4;
+  --brand-banner-bg: #f8e5cb;
+  --highlight: #c09f87;
 }
 
 body {
@@ -21,13 +25,20 @@ body {
   line-height: 1.6;
 }
 
+section {
+  padding: 100px 20px;
+}
+
 .container {
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Hero */
+/* ============================= */
+/* HERO */
+/* ============================= */
+
 .hero {
   height: 40vh;
   background-color: var(--highlight);
@@ -42,7 +53,6 @@ body {
 
 .hero h2 {
   font-size: 2.8rem;
-  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -51,10 +61,9 @@ body {
   opacity: 0.95;
 }
 
-/* Sections */
-section {
-  padding: 100px 20px;
-}
+/* ============================= */
+/* 공통 타이틀 */
+/* ============================= */
 
 .section-title {
   text-align: center;
@@ -72,7 +81,32 @@ section {
   color: #555;
 }
 
-/* Features */
+/* ============================= */
+/* 회사소개 */
+/* ============================= */
+
+.about {
+  background-color: #f7f3ee;
+  padding: 120px 20px;
+}
+
+.about .section-description {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--subtext);
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+/* ============================= */
+/* 강점 */
+/* ============================= */
+
 .features {
   background-color: #fdfaf7;
   text-align: center;
@@ -92,94 +126,230 @@ section {
   border-left: 5px solid var(--brown-light);
   border-radius: 10px;
   padding: 24px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   flex: 1 1 300px;
   min-width: 260px;
 }
 
 .feature-box h4 {
-  font-size: 1.1rem;
   color: var(--brown);
-  margin-bottom: 10px;
 }
 
-/* Map */
-.map-section {
-  background-color: var(--bg);
+/* ============================= */
+/* 매입 절차 */
+/* ============================= */
+
+.procedure {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #fff8f0;
 }
+
+.procedure-title {
+  font-size: 2.2rem;
+  color: var(--highlight);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.step {
+  background: var(--box-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 32px 24px;
+  width: 240px;
+  transition: transform 0.2s ease;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  color: var(--brown-light);
+  margin-bottom: 16px;
+}
+
+/* ============================= */
+/* 지도 */
+/* ============================= */
 
 .map-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
+  gap: 60px;
+  margin-top: 60px;
+  align-items: stretch;
 }
 
-.location-image img {
+.map-box {
+  flex: 1;
+  min-height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.map-box iframe {
   width: 100%;
-  max-width: 460px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 
 .map-info {
-  max-width: 460px;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: var(--subtext);
+  flex: 1;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
-.map-info h4 {
-  font-size: 1.1rem;
-  color: var(--brown);
-  margin-bottom: 8px;
+.phone {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--highlight);
+}
+
+/* ============================= */
+/* 버튼 */
+/* ============================= */
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.05rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.contact-btn.call {
+  background-color: #af8966;
+  color: #fff;
+}
+
+.contact-btn.kakao {
+  background-color: #fae100;
+  color: #3d1e1e;
+}
+
+/* ============================= */
+/* 플로팅 버튼 */
+/* ============================= */
+
+.floating-contact {
+  position: fixed;
+  right: 20px;
+  top: 30%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
 }
 
-.map-info i {
-  color: var(--brown-light);
+/* ============================= */
+/* 모바일 */
+/* ============================= */
+
+.mobile-text {
+  display: none;
 }
 
-/* Trust & Brand */
-.trust-list {
-  list-style: none;
-  padding: 0;
-  margin: 40px auto;
-  text-align: center;
-  max-width: 700px;
+@media (max-width: 768px) {
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .contact-btn {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .feature-box {
+    border-left: none;
+    border-top: 4px solid var(--brown-light);
+  }
+
+  .feature-boxes,
+  .steps,
+  .map-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .map-box {
+    height: 260px;
+  }
+
+  .floating-contact {
+    right: 15px;
+    bottom: 20px;
+    top: auto;
+    transform: none;
+  }
+
+  .floating-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pc-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+  }
 }
 
-.trust-list li {
-  margin-bottom: 8px;
-  color: var(--brown);
-  font-weight: 500;
-}
-
-.trust-banner {
-  background-color: var(--trust-banner-bg);
-  margin-top: 40px;
-  padding: 16px 20px;
-  border-radius: 8px;
-  color: var(--highlight);
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.brand-banner {
-  background-color: var(--brand-banner-bg);
-  padding: 14px 20px;
-  text-align: center;
-  border-radius: 10px;
-  font-weight: 600;
-  color: var(--highlight);
-  margin-top: 30px;
-  font-size: 0.95rem;
-}
 
 /* Footer */
 .footer {
@@ -233,18 +403,6 @@ section {
   .map-info {
     padding: 0 10px;
   }
-}
-.procedure {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #fff8f0; /* 연한 베이지 */
-}
-
-.procedure-title {
-  font-size: 2rem;
-  color: #5c3a1a; /* 짙은 브라운 */
-  margin-bottom: 40px;
-  font-weight: 700;
 }
 
 .steps {
@@ -728,3 +886,105 @@ section {
   width: 100%;
   height: 100%;
 }
+/* 기본값은 모바일 숨김 */
+.mobile-text {
+  display: none;
+}
+
+/* 모바일 화면일 때 */
+/* ============================= */
+/* 📱 모바일 레이아웃 안정화 패치 */
+/* ============================= */
+@media (max-width: 768px) {
+
+  /* 전체 섹션 여백 정리 */
+  section {
+    padding: 60px 20px;
+  }
+
+  /* ========================= */
+  /* 회사소개 박스 안정화 */
+  /* ========================= */
+  .about .section-description {
+    padding: 25px !important;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* PC 문구 숨김 / 모바일만 표시 */
+  .pc-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+  }
+
+  /* ========================= */
+  /* 강점 카드 정리 */
+  /* ========================= */
+  .feature-box {
+    width: 100%;
+    max-width: 340px;
+    border-left: none;
+    border-top: 4px solid var(--brown-light);
+  }
+
+  .feature-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ========================= */
+  /* 매입 절차 박스 정리 */
+  /* ========================= */
+  .step {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ========================= */
+  /* 지도 영역 안정화 */
+  /* ========================= */
+  .map-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .map-box {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .map-box iframe {
+    height: 100%;
+  }
+
+  .map-info {
+    padding: 25px;
+  }
+
+  /* ========================= */
+  /* 플로팅 버튼 위치 수정 */
+  /* ========================= */
+  .floating-contact {
+    right: 15px;
+    bottom: 20px;
+    top: auto;
+    transform: none;
+  }
+
+  .floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+  }
+
+}
+
