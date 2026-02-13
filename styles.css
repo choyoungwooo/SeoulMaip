@@ -130,6 +130,13 @@ section {
   min-width: 260px;
 }
 
+.feature-title {
+  font-size: 1.25rem;   /* 기존보다 살짝 크게 */
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+
 .feature-box h4 {
   color: var(--brown);
   margin-bottom: 12px;
